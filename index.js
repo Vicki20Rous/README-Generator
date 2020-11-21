@@ -1,4 +1,5 @@
 const generateMarkdown = require("./generateMarkdown");
+const inquirer = require ("inquirer")
 
 // array of questions for user
 const questions = [
@@ -9,27 +10,27 @@ const questions = [
 },
 {
     type: "input",
-    message: "What's your name?",
+    message: "What's your email address?",
     name: "Title"
 },
 {
     type: "input",
-    message: "What's your name?",
+    message: "What's skills do have?",
     name: "Title"
 },
 {
     type: "input",
-    message: "What's your name?",
+    message: "How many years of experience do you have?",
     name: "Title"
 },
 {
     type: "input",
-    message: "What's your name?",
+    message: "Tell us about yourself?",
     name: "Title"
 },
 {
     type: "input",
-    message: "What's your name?",
+    message: "What makes you a good fit?",
     name: "Title"
 },
 
@@ -47,11 +48,11 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-    prompt(questions).then(answers => {
+    inquirer.prompt(questions).then(answers => {
 
         const response = generateMarkdown(answers);
-        console.log((answers);
-        )
+        console.log(answers);
+        
     })
 
 }

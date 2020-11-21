@@ -2,20 +2,20 @@
 function generateMarkdown(data) {
     return `# ${data.title}
 
-    `## Description
-    $(data.Description) 
+    ## Description
+    ${data.Description} 
    
-    `## Installation instruction
-    $(data.Installation)
+    ## Installation instruction
+    ${data.Installation}
    
-    `## Usage information
-    $(data.Usage)
+    ## Usage information
+    ${data.Usage}
    
-    `## License 
-    $(data.License)
+    ## License 
+    ${data.License}
    
-    `## Questions
-    $(data.Questions)
+    ## Questions
+    ${data.Questions}
    
      //Github
   
